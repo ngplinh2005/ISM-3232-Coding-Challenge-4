@@ -1,33 +1,9 @@
 // Task 1: Create an Inventory Array of Product Objects
-let inventory = [
-    {
-        name: "Laptop",
-        price: 99.00,
-        quantity: 30,
-        lowStockLevel: 10
-    },
-    {
-        name: "Book",   
-        price: 50.00,
-        quantity: 200,
-        lowStockLevel: 60
-    },
-    {
-        name: "Bed",
-        price: 999.98,
-        quantity: 50,
-        lowStockLevel: 5
-    },
-    {
-        name: "Shoes",
-        price: 40,
-        quantity: 150,
-        lowStockLevel: 100
-    },
-    {
-        name: "Table",
-        price: 80,
-        quantity: 72,
-        lowStockLevel: 20
-    }
-]
+
+const inventory = [
+    { name: 'Laptop', price: 1200, quantity: 10, lowStockLevel: 3 },
+    { name: 'Smartphone', price: 800, quantity: 5, lowStockLevel: 2 },
+    { name: 'Tablet', price: 400, quantity: 7, lowStockLevel: 1 },
+    { name: 'Headphones', price: 100, quantity: 15, lowStockLevel: 5 },
+    { name: 'Smartwatch', price: 250, quantity: 3, lowStockLevel: 1 }
+];
