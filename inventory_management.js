@@ -12,7 +12,7 @@ const inventory = [
 
 function displayProductDetails(product) {
     const stockStatus = product.quantity <= product.lowStockLevel ? "Low Stock" : "In Stock"
-    const details = `Name: ${product.name}, Price: ${prodcut.price}, Quantity in stock: ${product.quantity}, Stock status: ${stockStatus}`
+    const details = `Name: ${product.name}, Price: ${product.price}, Quantity in stock: ${product.quantity}, Stock status: ${stockStatus}`
     return details
 }
 
@@ -50,3 +50,15 @@ function calculateInventoryValue(inventory) {
 }
 const totalValue = calculateInventoryValue(inventory)
 console.log(totalValue)
+
+// Task 6: Create a Function to Process a Sale
+
+function processSale(productName, unitsSold) {
+    let findProduct = inventory.find((product) => product.name === productName)
+    if (findProduct) {
+        return updateStock(findProduct, unitsSold)
+    }
+    else {
+        return `${productName} is not in the inventory.`
+    }
+}
