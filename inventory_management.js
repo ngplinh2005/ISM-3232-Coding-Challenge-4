@@ -40,3 +40,13 @@ function checkLowStock(inventory) {
         }
     });
 }
+console.log(checkLowStock(inventory))
+
+// Task 5: Create a Function to Calculate Total Inventory Value
+
+function calculateInventoryValue(inventory) {
+    let totalValue = inventory.reduce((total, product) => total + product.price * product.quantity, 0)
+    return totalValue
+}
+const totalValue = calculateInventoryValue(inventory)
+console.log(totalValue)
