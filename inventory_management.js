@@ -15,3 +15,18 @@ function displayProductDetails(product) {
     const details = `Name: ${product.name}, Price: ${prodcut.price}, Quantity in stock: ${product.quantity}, Stock status: ${stockStatus}`
     return details
 }
+
+// Task 3: Create a Function to Update Product Stock After Sales
+
+function updateStock(product, unitsSold) {
+    product.quantity -= unitsSold
+    if (product.quantity <= 0) {
+        return `${product.name} is now out of stock.`
+    }
+    else if (product.quantity <= product.lowStockLevel) {
+        return `${product.name} is now low stock.`
+    }
+    else {
+        return `Product: ${product.name}. Current quantity: ${product.quantity}`
+    }
+}
